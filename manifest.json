@@ -1,0 +1,1 @@
+{"short_name":"Covid-19 Estimator","name":"Corona Virus Estimator","icons":[{"src":"/assets/img/android-icon-192x192.png","type":"image/png","sizes":"192x192"},{"src":"/assets/img/covid.jpg","type":"image/jpeg","sizes":"500x500"}],"start_url":"http://covid19.github.io/","background_color":"#ffffff","display":"fullscreen"}

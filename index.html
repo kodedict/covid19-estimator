@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Covid-19 Estimator</title>
+    <meta property="og:image" content="assets/img/covid.jpg">
+    <meta name="description" content="A novelty COVID-19 infections estimator">
+    <meta name="keywords" content="coronavirus,coronavirus statistics,estimator,covid-19,health systems">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="180x180" href="assets/img/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/android-icon-192x192.png">
+    <link rel="icon" type="image/jpeg" sizes="500x500" href="assets/img/covid.jpg">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+
+    <div class="container outer">
+        <div style="margin-top: 50px"></div>
+        <div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p><img src="assets/img/logo.svg" width="150" class="img-fluid" alt="Logo"></p>
+                        <div style="margin-top: 50px"></div>
+                        <div class="col-md-7 welcome-note">
+                            <p>Attempt to help society and leaders prepare for the real big problem of COVID-19,
+                                which is its impact on lives, health systems, supply chains, and the economy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 50px"></div>
+        <div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <h1 class="sp">Estimator</h1>
+                        <p class="pp">Kindly fill in the details<br></p>
+                        <p id="error_message" class="form_error"></p>
+                        <div style="margin-top: 50px"></div>
+                        <form id="estimate-form" method="post">
+                            <div class="form-row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Population</label>
+                                        <div class="form_icon">
+                                            <span class="fab fa-envira side_icon"></span>
+                                            <input id="population" title="" class="form-control" data-population="population" type="text" required="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Reported Cases</label>
+                                        <div class="form_icon">
+                                            <span class="fas fa-file-medical side_icon"></span>
+                                            <input title="" id="reportedCases" data-reported-cases="reportedCases" class="form-control" type="text" required="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Total Hospital Beds</label>
+                                        <div class="form_icon">
+                                            <span class="fas fa-bed side_icon"></span>
+                                            <input title="" id="hospitalBed" data-total-hospital-beds="hospitalBed" class="form-control" type="text" required="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Time of Elapse</label>
+                                        <div class="form_icon">
+                                            <span class="fas fa-hourglass-half side_icon"></span>
+                                            <input title="" id="timeElapse" data-time-to-elapse="timeElapse" class="form-control" type="text" required="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Period Type</label>
+                                        <div class="form_icon">
+                                            <span class="far fa-calendar side_icon"></span>
+                                            <select title="" id="periodType" data-period-type="periodType" class="form-control" required="">
+                                                <option value="" selected="">select option</option>
+                                                <option value="day">Days</option>
+                                                <option value="week">Weeks</option>
+                                                <option value="month">Months</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <p class="info">All form field are required.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <button class="btn btn-primary" data-go-estimate="submit" type="submit">Estimate&nbsp;<i class="fas fa-angle-right"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-5" style="padding: 0; background: linear-gradient(164deg, rgba(255,198,0,1) 0%, rgba(255,63,0,1) 31%, rgba(191,0,113,1) 63%, rgba(54,0,255,1) 100%); height: 550px">
+                        <div style="background-image: url('https://images.pexels.com/photos/3951862/pexels-photo-3951862.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');height: inherit;background-position: center;background-size: cover;background-repeat: no-repeat; opacity: 0.5"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 150px"></div>
+        <div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="tnote">Yes, the virus only kills a small percentage of those afflicted. Yes, the flu kills 10s of thousands of people annually. Yes, 80% of people will experience lightweight symptoms with COVID19. Yes the mortality rate of COVID19 is relatively
+                            low (1–2%). All of this true, but is immaterial. They are the wrong numbers to focus on.<br></p>
+                        <p class="tname">Jason S Warner<br></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+</html>
